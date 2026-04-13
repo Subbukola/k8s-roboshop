@@ -9,10 +9,11 @@ metadata:
     project: roboshop
 
 data:
-  MONGO: true
+  MONGO: "true"
   MONGO_URL: "mongodb://mongodb:27017/catalogue"
 
 ---
+
 apiVersion: apps/v1 
 kind: Deployment
 metadata: 
@@ -56,7 +57,7 @@ spec:
             periodSeconds: 10
             failureThreshold: 2          
               
-          liveinessProbe:
+          livenessProbe:
             httpGet:
               path: /health
               port: 8080
