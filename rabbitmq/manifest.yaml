@@ -1,4 +1,19 @@
 apiVersion: apps/v1 
+kind: ConfigMap
+metadata: 
+  name: rabbitmq 
+  namespace: roboshop
+  labels:
+    env: dev
+    component: rabbitmq 
+    project: roboshop
+
+data: 
+  RABBITMQ_DEFAULT_USER: roboshop
+  RABBITMQ_DEFAULT_PASS: roboshop123
+
+---
+apiVersion: apps/v1 
 kind: Deployment
 metadata: 
   name: rabbitmq
