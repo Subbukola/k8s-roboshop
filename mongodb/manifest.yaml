@@ -1,0 +1,32 @@
+apiVersion: v1 
+kind: Deployment
+metadata: 
+  name: mondodb
+  namespace: roboshop
+  labels:
+    env: dev
+    component: mongodb
+    project: roboshop
+
+spec:
+  replicas:
+  selector:
+    matchLabels:
+      env: dev
+      component: mongodb
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        env: dev
+        component: mongodb
+        project: roboshop
+    spec:
+      containers:
+        - name: mongodb 
+          image: subbukola541/mongodb
+      
+      
+
+
+
