@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: mongodb 
-          image: subbukola541/mongodb
+          image: subbukola541/mongodb:1.0
       
       
 
