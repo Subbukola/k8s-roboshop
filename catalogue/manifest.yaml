@@ -63,6 +63,7 @@ spec:
               port: 8080
             periodSeconds: 10
             failureThreshold: 2
+            initialDelaySeconds: 20
           
           
           envFrom:
