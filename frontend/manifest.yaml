@@ -99,6 +99,10 @@ spec:
         component: frontend 
         project: roboshop
     spec:
+      volumes:
+          - name: nginx-config 
+            configMap:
+              name: frontend
       containers:
         - name: frontend 
           image: subbukola541/frontend:1.0
@@ -123,12 +127,7 @@ spec:
               path: /health
               port: 80
             periodSeconds: 10
-            failureThreshold: 2
-
-          volumes:
-            - name: nginx-config 
-              configMap:
-                name: frontend  
+            failureThreshold: 2  
 
           volumeMounts:
             - name: nginx-config
