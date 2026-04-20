@@ -40,9 +40,10 @@ spec:
       containers:
         - name: rabbitmq 
           image: subbukola541/rabbitmq:3
-      envFrom:
-        - configMapRef:
-            name: rabbitmq
+          envFrom:
+            - configMapRef:
+                name: rabbitmq
+         
 
           
 ---
